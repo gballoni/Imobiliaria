@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>i-Mobiliária - Cadastrar</title>
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/cadastro.css">
-</head>
+	<head>
+	  <meta charset="utf-8">
+	  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	  <title>i-Mobiliária - Login</title>
+	  <meta content="" name="descriptison">
+	  <meta content="" name="keywords">
+
+	  <!-- Links para as Favicons usadas -->
+	  <link href="assets/img/favicon.png" rel="icon">
+
+	  <!-- Fontes: Google Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+	  <!-- Arquivos de CSS de apoio -->
+	  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+	  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+	  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"> <!-- Biblioteca do carrossel usado -->
+
+	  <!-- Arquivo de CSS principal -->
+	  <link href="assets/css/style.css" rel="stylesheet">
+	</head>
 <body>
+
+	  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+		<div class="container">
+		  <a class="navbar-brand texto-principal" href="index.html">i<span class="cor-b">Mobiliária</span></a>
+		  <div class="justify-content-center" id="navbarDefault">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link active" href="index.html">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="sobre.html">Sobre Nós</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="imoveis.html">Imóveis</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="contato.html">Contato</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="Login.html">Login</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav><!-- Fim do Menu de Navegação -->
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12 cadastro-section-wrapper">
-
-          <div class="cadastro-wrapper my-auto">
-            <h1 class="cadastro-title">Digite seus dados:</h1>
-            <form action="#!">
-              <div class="form-group">
-                <label for="nome">Nome Completo</label>
-                <input type="nome" name="nome" id="nome" class="form-control" placeholder="Digite seu nome">
-              </div>
-              <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="email@exemplo.com">
-              </div>
-              <div class="form-group mb-4">
-                <label for="usuario">usuario</label>
-                <input type="usuario" name="usuario" id="usuario" class="form-control" placeholder="Digite seu usuário">
-              </div>	
-              <div class="form-group mb-4">
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Digite sua senha">
-              </div>				  
-              <input name="cadastro" id="cadastro" class="btn btn-block cadastro-btn" type="button" value="Cadastrar">
-            </form>
-          </div>
+        <div class="col-sm-6 section-t8">
+			<center>
+			<h3 class="section-b2">Cadastre!</h3>
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                    <div class="col-md-12 mb-3">
+                      <div class="form-group">
+						<p class="text-left">Nome completo:</p>
+                        <input name="name" type="text" class="form-control form-control-lg form-control-a" placeholder="Seu Nome" data-rule="text" data-msg="Esse campo não pode ser em branco">
+                        <div class="validate"></div>
+						<p class="text-left">Usuário:</p>
+                        <input name="user" type="text" class="form-control form-control-lg form-control-a" placeholder="Seu Usuário" data-rule="text" data-msg="Esse campo não pode ser em branco">
+                        <div class="validate"></div>
+						<p class="text-left">E-Mail:</p>
+                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Seu Email" data-rule="email" data-msg="Digite um Email válido">
+                        <div class="validate"></div>
+                      </div>
+                      <div>
+						<p class="text-left">Senha:</p>
+                        <input name="email" type="password" class="form-control form-control-lg form-control-a" placeholder="Sua Senha" data-rule="password" data-msg="Digite um Email válido">
+                        <div class="validate"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button type="submit" class="btn btn-b">Cadastrar!</button>
+                    </div>
+                  </div>
+                </form>
+				<div class="text-center section-t3">
+					<a href="Recover.html" class="forgot-password-link">Esqueceu a senha?</a>
+					<p class="login-wrapper-footer-text"><a href="Index.html" class="text-reset">>> Voltar para a Home <<</a></p>
+				</div>
+				</center>
         </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="assets/img/login.jpg" alt="login image" class="login-img">
+        </div>
+
       </div>
     </div>
   </main>
