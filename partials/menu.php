@@ -31,13 +31,14 @@
 			  <li class="nav-item">
 				<a class="nav-link" href="Login.php">Login</a>
 			  </li>
-			  <li class="btn-container nav-item">
-            <button  type="button" class="btn btn-outline-dark" name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-            <button  type="button" class="btn btn-outline-dark" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-        	</li>
+
 			</ul>
 	
 		  </div>
+		  <div class="btn-container">
+            <button  type="button" class="btn btn-outline-dark" name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+            <button  type="button" class="btn btn-outline-dark" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+        	<div>
 		</div>
 	  </nav>
 
