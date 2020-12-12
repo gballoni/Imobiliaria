@@ -27,34 +27,9 @@
 
 <body>
 
-	  <!-- Menu de navegação (Navbar) -->
-	  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-		<div class="container">
-		  <a class="navbar-brand texto-principal" href="index.html">i<span class="cor-b">Mobiliária</span></a>
-		  <div class="justify-content-center" id="navbarDefault">
-			<ul class="navbar-nav">
-			  <li class="nav-item">
-				<a class="nav-link" href="index.html">Home</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="sobre.html">Sobre Nós</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="imoveis.html">Imóveis</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link active" href="contato.html">Contato</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="Login.html">Login</a>
-			  </li>
-			</ul>
-		  </div>
-		</div>
-	  </nav><!-- Fim do Menu de Navegação -->
-
+  
   <main id="main">
-
+		<?php include 'partials/menu.php'; ?>
     <!-- ======= Intro Conteúdo ======= -->
     <section class="section-t8">
       <div class="container">
@@ -257,25 +232,7 @@
 		</div>
 	  </section>
 
-	  <footer>
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12">
-				<ul class="list-inline">
-				  <li class="list-inline-item">
-					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-				  </li>
-				  <li class="list-inline-item">
-					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-				  </li>
-				  <li class="list-inline-item">
-					<a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-				  </li>
-				</ul>
-			</div>
-		  </div>
-		</div>
-	  </footer><!-- Fim do Footer -->
+    <?php include 'partials/footer.php'; ?>
 
 	  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 	  

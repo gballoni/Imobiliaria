@@ -26,32 +26,7 @@
 	</head>
 
 	<body>
-	  <!-- Menu de navegação (Navbar) -->
-	  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-		<div class="container">
-		  <a class="navbar-brand texto-principal" href="index.html">i<span class="cor-b">Mobiliária</span></a>
-		  <div class="justify-content-center" id="navbarDefault">
-			<ul class="navbar-nav">
-			  <li class="nav-item">
-				<a class="nav-link active" href="index.html">Home</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="sobre.html">Sobre Nós</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="imoveis.html">Imóveis</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="contato.html">Contato</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="Login.html">Login</a>
-			  </li>
-			</ul>
-		  </div>
-		</div>
-	  </nav><!-- Fim do Menu de Navegação -->
-
+		<?php include 'partials/menu.php'; ?>
 	  <!-- Seção HERO (capa) do Site -->
 	  <div class="intro">
 		  <div class="hero-capa" style="background-image: url(assets/img/slide-1.jpg)">
@@ -139,7 +114,7 @@
 					  </select>
 				  </div>
 				  <div class="col-md-12">
-					<button type="submit" class="btn btn-b">Achar Imóvel!</button>
+					<button type="submit" class="btn btn-b">Achar Imóvel</button>
 				  </div>
 				</div>
 			  </form>
@@ -379,79 +354,7 @@
 
 	  </main><!-- Fim do #main -->
 
-	  <!-- Footer -->
-	  <section class="section-footer">
-		<div class="container">
-		  <div class="row">
-			<div class="col-sm-12 col-md-4">
-				<h3 class="texto-principal">I-Mobiliária</h3>
-				<div>
-				  <p class="cor-texto-a">
-					Prezamos pela experiência dos nossos clientes, e esse é o nosso diferencial: o melhor imóvel, de forma rápida e simples!
-				  </p>
-				</div>
-				<div>
-				  <ul class="list-unstyled">
-					<li class="cor-a">
-					  <span class="cor-texto-a">Email:</span> contacto@imobiliária.com</li>
-					<li class="cor-a">
-					  <span class="cor-texto-a">Telefone:</span> (16) 3414-5610</li>
-				  </ul>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-4 section-md-t3">
-				<h3 class="texto-principal">Sitemap</h3>
-					<ul class="list-unstyled">
-					  <li>
-						<i class="fa fa-angle-right"></i> <a href="#">Home</a>
-					  </li>
-					  <li>
-						<i class="fa fa-angle-right"></i> <a href="#">Imóveis</a>
-					  </li>
-					  <li>
-						<i class="fa fa-angle-right"></i> <a href="#">Corretores</a>
-					  </li>
-					  <li>
-						<i class="fa fa-angle-right"></i> <a href="#">Políticas de Privacidade</a>
-					  </li>
-					</ul>
-			</div>
-			<div class="col-sm-12 col-md-4 section-md-t3">
-				<h3 class="w-titulo-a texto-principal">Login</h3>
-				<div>
-				  <ul class="list-unstyled">
-					<li class="item-list-a">
-					  <i class="fa fa-angle-right"></i> <a href="Login.html">Entrar</a>
-					</li>
-					<li class="item-list-a">
-					  <i class="fa fa-angle-right"></i> <a href="Cadastro.html">Criar Cadastro</a>
-					</li>
-				  </ul>
-				</div>
-			</div>
-		  </div>
-		</div>
-	  </section>
-
-	  <footer>
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12">
-				<ul class="list-inline">
-				  <li class="list-inline-item">
-					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-				  </li>
-				  <li class="list-inline-item">
-					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-				  </li>
-				  <li class="list-inline-item">
-					<a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-				  </li>
-				</ul>
-			</div>
-		  </div>
-		</div>
-	  </footer><!-- Fim do Footer -->
+      <?php include 'partials/footer.php'; ?>
 
 	  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 	  

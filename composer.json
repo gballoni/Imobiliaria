@@ -1,0 +1,13 @@
+{
+    "name": "Imobiliaria",
+    "description": "Breve descrição do que a aplicação se propoe a fazer"
+    "authors": [
+        {
+            "name": "Guilherme",
+            "email": "balloni.guilherme@usp.br"
+        }
+    ],
+    "require": {
+      
+    }
+}

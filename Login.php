@@ -25,31 +25,7 @@
 	  <link href="assets/css/style.css" rel="stylesheet">
 	</head>
 <body>
-
-	  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-		<div class="container">
-		  <a class="navbar-brand texto-principal" href="index.html">i<span class="cor-b">Mobiliária</span></a>
-		  <div class="justify-content-center" id="navbarDefault">
-			<ul class="navbar-nav">
-			  <li class="nav-item">
-				<a class="nav-link active" href="index.html">Home</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="sobre.html">Sobre Nós</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="imoveis.html">Imóveis</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="contato.html">Contato</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="Login.html">Login</a>
-			  </li>
-			</ul>
-		  </div>
-		</div>
-	  </nav><!-- Fim do Menu de Navegação -->
+<?php include 'partials/menu.php'; ?>
   <main>
     <div class="container-fluid">
       <div class="row">
