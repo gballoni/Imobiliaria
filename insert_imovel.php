@@ -1,5 +1,5 @@
 <?php 
-
+    session_start();
     require_once("conectDB.php");
     $type = $_POST['type'];
     if($type == 'Alugar'){
@@ -16,10 +16,10 @@
     $bathroom = $_POST['bathroom'];
     $price = $_POST['price'];
     $announcement = $_POST['announcement'];
-    $property_owner = "teste1";
+    $property_owner = $_SESSION['username'];
     
 
-    echo 'cep:'.$cep;
+
 
     $sql = 'insert into property (type, 
                             cep,
@@ -38,6 +38,7 @@
 
               echo $sql;
     $rs = mysqli_query($mysqli, $sql);
+     header('Location:meus_anuncios.php');exit(); 
     if(!$rs){
         echo 'Erro: '.mysqli_error($mysqli);
     }

@@ -1,17 +1,109 @@
-<?php 
-    require_once("conectDB.php");
-    $name = $_POST['name'];
-    $user_name = $_POST['user_name'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    echo 'Nome:'.$name;
+	  <title>i-Mobiliária - Login</title>
+	  <meta content="" name="descriptison">
+	  <meta content="" name="keywords">
 
-    $sql = 'insert into user (name, username, email, password, creation_date)
-             values ("'.$name.'", "'.$user_name.'", "'.$email.'", "'.$senha.'", Now())';
-    $rs = mysqli_query($mysqli, $sql);
-    if(!$rs){
-        echo 'Erro: '.mysqli_error($rs);
-    }
+	  <!-- Links para as Favicons usadas -->
+	  <link href="assets/img/favicon.png" rel="icon">
 
-?>
+	  <!-- Fontes: Google Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+	  <!-- Arquivos de CSS de apoio -->
+	  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+	  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+	  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"> <!-- Biblioteca do carrossel usado -->
+
+	  <!-- Arquivo de CSS principal -->
+	  <link href="assets/css/style.css" rel="stylesheet">
+	</head>
+<body>
+
+<?php include 'partials/menu.php'; ?>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 section-t8">
+			<center>
+			<h3>Cadastro</h3>
+                
+                  <div class="row">
+                    <div class="col-md-12 mb-3">
+                      <div class="form-group">
+						<p class="text-left">Nome completo:</p>
+                        <input name="name" type="text" id="name" class="form-control form-control-lg form-control-a" placeholder="Seu Nome" data-rule="text" data-msg="Esse campo não pode ser em branco">
+                        <div class="validate"></div>
+						<p class="text-left">Usuário:</p>
+                        <input name="user" type="text" id="user_name" class="form-control form-control-lg form-control-a" placeholder="Seu Usuário" data-rule="text" data-msg="Esse campo não pode ser em branco">
+                        <div class="validate"></div>
+						<p class="text-left">E-Mail:</p>
+                        <input name="email" type="email" id="email" class="form-control form-control-lg form-control-a" placeholder="Seu Email" data-rule="email" data-msg="Digite um Email válido">
+                        <div class="validate"></div>
+                      </div>
+                      <div>
+						<p class="text-left">Senha:</p>
+                        <input name="email" type="password" id="senha" class="form-control form-control-lg form-control-a" placeholder="Sua Senha" data-rule="password" data-msg="Digite um Email válido">
+                        <div class="validate"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button class="btn btn-b" id="salvar">Cadastrar!</button>
+                    </div>
+                  </div>
+                
+				<div class="text-center section-t3">
+					<a href="Recover.php" class="forgot-password-link">Esqueceu a senha?</a>
+					<p class="login-wrapper-footer-text"><a href="Index.php" class="text-reset">>> Voltar para a Home <<</a></p>
+				</div>
+				</center>
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="assets/img/login.jpg" alt="login image" class="login-img">
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script>
+	document.getElementById("salvar").addEventListener("click", function() {
+		var name = document.getElementById('name').value;
+		var user_name = document.getElementById('user_name').value;
+		var email = document.getElementById('email').value;
+		var senha = document.getElementById('senha').value;
+		
+		console.log(name+" "+user_name+" "+email+" "+senha);
+
+		//////////
+		var http = new XMLHttpRequest();
+		var url = "./cadastro1.php";
+		var params = "name="+name+"&user_name="+user_name+"&email="+email+"&senha="+senha;
+		http.open("POST", url);
+
+		//Send the proper header information along with the request
+		
+
+		http.onreadystatechange = function() {//Call a function when the state changes.
+			if(http.readyState == 4 && http.status == 200) {
+				alert("cadastrou");
+				console.log(http.responseText);
+			}
+		}
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		http.send(params);
+		//////////
+
+
+	});
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

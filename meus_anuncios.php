@@ -27,10 +27,11 @@
 
 
 </head>
-	
+<?php include 'verifica_login.php'; ?>	
 <?php
 require_once("conectDB.php"); 
- $sql = "SELECT  * FROM  property";
+ $sql = "SELECT  * FROM  property where property_owner = '{$_SESSION['username']}'";
+ echo $sql;
  $results = mysqli_query($mysqli, $sql) ;
 
 
@@ -68,7 +69,9 @@ require_once("conectDB.php");
 			</tr>
 		<?php } ?>
 	</table>
-	<button onclick="window.location.href = './Cadastrar_Imovel.php'" id = "create"  class="btn btn-success " >Creat</button>	
+	<button onclick="window.location.href = './Cadastrar_Imovel.php'" id = "create"  class="btn btn-success " >Creat</button>
+	<button onclick="window.location.href = 'logout.php'" id = "Logout"  class="btn btn-dark " >Logout</button>		
+	
   </main>
   <?php include 'partials/footer.php'; ?>
   <script>
@@ -78,7 +81,7 @@ require_once("conectDB.php");
 		var id = event.target.dataset.imovel 
 
 	
-		
+		console.log('delete');
 	
 
 		//////////
