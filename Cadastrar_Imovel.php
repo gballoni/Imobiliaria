@@ -120,7 +120,7 @@
                   <textarea id="announcement" class="form-control form-control-lg "></textarea>
 				  </div>
 				  <div class="col-md-12">
-					<button type="submit" class="btn btn-b" id ="salvar">Cadastrar Imovel</button>
+					<button type ="submit" class="btn btn-b" id ="salvar">Cadastrar Imovel</button>
 				  </div>
 				</div>
 			  </form>
@@ -176,11 +176,13 @@
 
 		http.onreadystatechange = function() {//Call a function when the state changes.
 			if(http.readyState == 4 && http.status == 200) {
+        window.location.href = "Meus_Anuncios.php";
 				
 			}
 		}
 		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		http.send(params);
+ 
    
    
 		//////////

@@ -38,7 +38,7 @@
 
               echo $sql;
     $rs = mysqli_query($mysqli, $sql);
-     header('Location:meus_anuncios.php');exit(); 
+  
     if(!$rs){
         echo 'Erro: '.mysqli_error($mysqli);
     }

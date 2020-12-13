@@ -61,10 +61,10 @@ require_once("conectDB.php");
 				<td><input id ='room_<?=$row['id']?>' class="input" type="text" value="<?php echo $row['room']; ?>"></td>
 				<td><input id= 'price_<?=$row['id']?>' class="input" type="text" value="<?php echo $row['price']; ?>"></td>
 				<td>
-					<a id ="edit"  data-imovel="<?php echo $row['id']; ?>"  class="btn btn-warning edit_btn" >Edit</a>
+					<a id ="edit"  data-imovel="<?php echo $row['id']; ?>"onclick="editar(<?php echo $row['id']; ?>)"  class="btn btn-warning edit_btn" >Edit</a>
 				</td>
 				<td >
-					<a id ="delete" data-imovel="<?php echo $row['id']; ?>" class="btn btn-danger del_btn">Delete</a>
+					<a id ="delete" data-imovel="<?php echo $row['id']; ?>" onclick="deletar(<?php echo $row['id']; ?>)" class="btn btn-danger del_btn delete">Delete</a>
 				</td>
 			</tr>
 		<?php } ?>
@@ -75,10 +75,10 @@ require_once("conectDB.php");
   </main>
   <?php include 'partials/footer.php'; ?>
   <script>
-	document.getElementById("delete").addEventListener("click", function(event) {
+	function deletar(id){
 
 		event.preventDefault();
-		var id = event.target.dataset.imovel 
+		
 
 	
 		console.log('delete');
@@ -109,12 +109,12 @@ require_once("conectDB.php");
 		//////////
 
 
-	});
+	}
 
-	document.getElementById("edit").addEventListener("click", function(event) {
+	function editar(id) {
 
 event.preventDefault();
-var id = event.target.dataset.imovel;
+
 var city = document.getElementById('city_'+id).value;  
 var garage = document.getElementById('garage_'+id).value; 
 var room = document.getElementById('room_'+id).value; 
@@ -148,7 +148,7 @@ http.send(params);
 //////////
 
 
-});
+};
   </script>
 	  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 	  
