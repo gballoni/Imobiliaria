@@ -53,7 +53,7 @@
                 </form>
 				<div class="text-center section-t3">
 					<a href="Recover.html" class="forgot-password-link">Esqueceu a senha?</a>
-					<p class="login-wrapper-footer-text">Ainda não tem conta? <a href="Cadastro.html" class="text-reset">Crei aqui :)</a></p>
+					<p class="login-wrapper-footer-text">Ainda não tem conta? <a href="Cadastro.html" class="text-reset">Crie aqui :)</a></p>
 					<p class="login-wrapper-footer-text"><a href="Index.html" class="text-reset">Voltar para a Home</a></p>
 				</div>
 				</center>

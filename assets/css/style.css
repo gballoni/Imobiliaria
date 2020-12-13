@@ -224,6 +224,10 @@ a:hover {
   margin-left: 0;
 }
 
+.card{
+
+height: 100px;
+}
 @media (min-width: 768px) {
   .navbar-default.navbar-trans .nav-item, .navbar-default.navbar-reduce .nav-item {
     margin-left: 15px;

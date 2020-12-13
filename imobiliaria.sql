@@ -68,3 +68,18 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `property` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` enum ('A', 'C') NOT NULL,
+  `property owner` varchar(15) NOT NULL,
+  `CEP` varchar(10) NOT NULL,
+  `city` varchar(15) NOT NULL,
+  `UF` char(2) NOT NULL,
+  `neighborhood` varchar(15) NOT NULL,
+  `room` int NOT NULL,
+  `bathroom`  int NOT NULL,
+  `garage`  int NOT NULL,
+  `price`  decimal(19,4) NOT NULL
+  `announcement` varchar(100) NOT NULL
+)

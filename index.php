@@ -39,7 +39,7 @@
 							<h1 class="intro-titulo">
 								<span class="cor-b">OS MELHORES</span><br> Imóveis Da Região
 							</h1>
-							<p><a href="imoveis.html"><span class="preco-a">Saiba Mais</span></a></p>
+							<p><a href="imoveis.php"><span class="preco-a">Saiba Mais</span></a></p>
 						</div>
 					  </div>
 					</div>
@@ -65,7 +65,7 @@
 				<div class="row">
 				  <div class="col-md-6">
 					  <label for="tipo">Tipo</label>
-					  <select class="form-control form-control-lg " id="tipo">
+					  <select class="form-control form-control-lg " id="type">
 						<option>Todos</option>
 						<option>Alugar</option>
 						<option>Comprar</option>
@@ -73,7 +73,7 @@
 				  </div>
 				  <div class="col-md-6">
 					  <label for="cidade">Cidade</label>
-					  <select class="form-control form-control-lg " id="cidade">
+					  <select class="form-control form-control-lg " id="city">
 						<option>Todas as Cidades</option>
 						<option>São Carlos</option>
 						<option>Araraquara</option>
@@ -81,7 +81,7 @@
 				  </div>
 				  <div class="col-md-6">
 					  <label for="quartos">Quartos</label>
-					  <select class="form-control form-control-lg " id="quartos">
+					  <select class="form-control form-control-lg " id="room">
 						<option>01</option>
 						<option>02</option>
 						<option>03</option>
@@ -89,7 +89,7 @@
 				  </div>
 				  <div class="col-md-6">
 					  <label for="garagem">Garagem</label>
-					  <select class="form-control form-control-lg " id="garagem">
+					  <select class="form-control form-control-lg " id="garage">
 						<option>Nenhuma</option>
 						<option>01</option>
 						<option>02</option>
@@ -97,7 +97,7 @@
 				  </div>
 				  <div class="col-md-6 mb-2">
 					  <label for="banheiros">Banheiros</label>
-					  <select class="form-control form-control-lg " id="banheiros">
+					  <select class="form-control form-control-lg " id="bathroom">
 						<option>01</option>
 						<option>02</option>
 						<option>03</option>
@@ -105,7 +105,7 @@
 				  </div>
 				  <div class="col-md-6 mb-2">
 					  <label for="preco">Preço Mínimo</label>
-					  <select class="form-control form-control-lg " id="preco">
+					  <select class="form-control form-control-lg " id="price">
 						<option>Todos</option>
 						<option>R$ 50.000,00</option>
 						<option>R$ 100.000,00</option>
@@ -114,7 +114,7 @@
 					  </select>
 				  </div>
 				  <div class="col-md-12">
-					<button type="submit" class="btn btn-b">Achar Imóvel</button>
+					<button type="submit" class="btn btn-b" id="buscar">Achar Imóvel</button>
 				  </div>
 				</div>
 			  </form>
@@ -122,6 +122,49 @@
 			</div>
 			</div>
 			</section>
+	<script>
+		document.getElementById("buscar").addEventListener("click", function(event) {
+        event.preventDefault()
+		var type = document.getElementById('type').value;
+		var city = document.getElementById('city').value;
+        var room = document.getElementById('room').value;
+		var garage = document.getElementById('garage').value;
+        var bathroom = document.getElementById('bathroom').value;
+		var price = document.getElementById('price').value;
+
+		
+	
+
+		//////////
+		var http = new XMLHttpRequest();
+		var url = "./search.php";
+
+		
+       var params = "type="+type+"&city="+city+"&room="+room+"&garage="+garage+"&bathroom="+bathroom+"&price="+price;
+       console.log(params);
+		http.open("POST", url);
+
+		//Send the proper header information along with the request
+		document.getElementById("retorno_imoveis").innerHTML  = '';
+
+		http.onreadystatechange = function() {//Call a function when the state changes.
+			if(http.readyState == 4 && http.status == 200) {
+				console.log(http.responseText);
+				document.getElementById("retorno_imoveis").innerHTML  = http.responseText;
+			}
+		}
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		http.send(params);
+		//////////
+
+
+	});
+	</script>|
+			<div class="container" style="margin-top:50px;">
+        		<div class="row" id="retorno_imoveis">
+						
+				</div>
+    		</div>
 
 		<!-- Seção de Serviços -->
 		<section class="section-t8">
@@ -247,7 +290,7 @@
 
 			<div class="row section-t3">
 				<div class="col-md-12">
-				<a href="imoveis.html"><button type="submit" class="btn btn-b">Ver Todas</button></a>
+				<a href="imoveis.php"><button type="submit" class="btn btn-b">Ver Todas</button></a>
 				</div>
 			</div>
 		  </div>

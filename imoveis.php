@@ -71,7 +71,7 @@
 					</div>
 				<p class="section-t1" >A casa ideal para quem procura espaço e conforto.</p>
 				<p>Saiba mais!</p>
-				<a href="imovel.html"><button type="submit" class="btn btn-b">Ver Imóvel</button></a>
+				<a href="imovel.php"><button type="submit" class="btn btn-b">Ver Imóvel</button></a>
 		  </div>
 
           <div class="col-md-4 text-center">
@@ -84,7 +84,7 @@
 					</div>
 				<p class="section-t1">Sobrado com 3 quartos e 3 banheiros</p>
 				<p>Saiba mais!</p>
-				<a href="imovel.html"><button type="submit" class="btn btn-b">Ver Imóvel</button></a>
+				<a href="imovel.php"><button type="submit" class="btn btn-b">Ver Imóvel</button></a>
 		  </div>
 
           <div class="col-md-4 text-center">
@@ -97,7 +97,7 @@
 					</div>
 				<p class="section-t1">Apartamento luxuoso.</p>
 				<p>Saiba mais!</p>
-				<a href="imovel.html"><button type="submit" class="btn btn-b">Ver Imóvel</button></a>
+				<a href="imovel.php"><button type="submit" class="btn btn-b">Ver Imóvel</button></a>
 		  </div>
               
       </div>
